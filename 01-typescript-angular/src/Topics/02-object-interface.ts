@@ -1,13 +1,23 @@
-let skills:[] = ['Bash', 'Counter', 'Healing'];
+const skills:[] = ['Bash', 'Counter', 'Healing'];
 
-
-const trancos={
-    Nombre:'Trancos',
-    hp: 95,
-    skills:'Bash','Counter'
-
+interface Character {
+    Nombre : string;
+    hp : number;
+    skills : string[];
+    hometown?: string;
 }
 
 
 
-export {}
+
+const trancos:Character={
+    Nombre:'Trancos',
+    hp: 95,
+    skills:['Bash','Counter'],
+
+};
+
+trancos.hometown = 'Ribendel';
+console.table (trancos);
+
+export{};
